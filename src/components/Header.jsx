@@ -1,4 +1,4 @@
-import logo from "/Users/joananboureille/Lereacteur/Tests-techniques/test-marvel/frontend/src/assets/img/logo.svg";
+import logo from "../assets/img/logo.svg";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
