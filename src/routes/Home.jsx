@@ -1,14 +1,13 @@
 import { Router } from "react-router-dom";
-import Header from "../components/Header";
+import hero from "../assets/img/hero2.webp";
+
 const Home = () => {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route></Route>
-        <Route></Route>
-      </Routes>
-    </Router>
+    <div className="container">
+      <a href="https://www.marvel.com/" target="_blank">
+        <img className="hero-img" src={hero} alt="" />
+      </a>
+    </div>
   );
 };
 export default Home;
