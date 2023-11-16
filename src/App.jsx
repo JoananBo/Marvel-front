@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Characters from "./routes/Characters";
 import Comics from "./routes/Comics";
+import CharacterId from "./routes/CharacterId";
 import "./App.css";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/characters" element={<Characters />}></Route>
         <Route path="/comics" element={<Comics />}></Route>
+        <Route path="/comics/:characterId" element={<CharacterId />}></Route>
       </Routes>
     </Router>
   );

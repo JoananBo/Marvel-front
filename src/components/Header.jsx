@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header-block">
-      <img src={logo} alt="" />
+      <Link to="/characters">
+        <img src={logo} alt="" />
+      </Link>
       <section>
         <Link to="/characters">
           <button>Personnages</button>
