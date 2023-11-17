@@ -13,7 +13,7 @@ const CharacterId = () => {
       try {
         // console.log("1");
         const response = await axios.get(
-          `http://localhost:3000/comics/${characterId}`
+          `https://site--marvel-backend--zg6fw4jztfcn.code.run/comics/${characterId}`
         );
         console.log("response=>", response.data);
         setData(response.data);
