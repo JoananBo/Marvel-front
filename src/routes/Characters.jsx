@@ -5,11 +5,16 @@ import { Link } from "react-router-dom";
 const Characters = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const addEllipsis = (text, maxLength) => {
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/characters");
+        const response = await axios.get(
+          "http://site--marvel-backend--zg6fw4jztfcn.code.run/characters"
+        );
         console.log("response=>", response.data);
         setData(response.data);
         setIsLoading(false);
@@ -31,11 +36,11 @@ const Characters = () => {
               to={`/comics/${character._id}`}
               // state={{ characterId: character._id }}
             >
-              <div className="card">
-                <div className="card-name">
-                  <p>{character.name}</p>
+              <div className="cards">
+                <div className="card-top">
+                  <h2>{character.name}</h2>
                 </div>
-                <div className="card-img-story">
+                <div className="card-bot">
                   <img
                     src={
                       character.thumbnail.path +
@@ -45,7 +50,8 @@ const Characters = () => {
                     alt={character.name}
                   />
                   <div>
-                    <p>{character.description}</p>
+                    {/* <p>{character.description}</p> */}
+                    <p>{addEllipsis(character.description, 100)}</p>
                   </div>
                 </div>
               </div>

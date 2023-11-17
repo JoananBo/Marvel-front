@@ -49,3 +49,51 @@ button {
   width: 100%;
   object-fit: cover;
 }
+/*--------------------------------------*/
+/*-----------CHARACTERS-----------------*/
+/*--------------------------------------*/
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 1080px;
+  margin: 0 auto;
+  border: solid 3px yellow;
+}
+.cards {
+  display: flex;
+  border: solid 3px red;
+  flex-direction: column;
+  height: 350px;
+  width: 250px;
+}
+.card-top {
+  border: solid 3px violet;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.card-top h2 {
+  text-decoration: none;
+  /* border: solid 2px black; */
+}
+.card-bot {
+  border: solid 3px green;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  /* justify-self: center; */
+  /* align-items: center; */
+}
+.card-bot img {
+  width: 100%;
+  height: 70%;
+}
+.card-bot p {
+  height: 30%;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}

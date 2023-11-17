@@ -4,11 +4,16 @@ import axios from "axios";
 const Comics = () => {
   const [data, SetData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const addEllipsis = (text, maxLength) => {
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/comics");
+        const response = await axios.get(
+          "http://site--marvel-backend--zg6fw4jztfcn.code.run/comics"
+        );
         console.log("response =>", response.data);
         SetData(response.data);
         setIsLoading(false);
@@ -21,17 +26,24 @@ const Comics = () => {
   return isLoading ? (
     <p>Un peu de patience...</p>
   ) : (
-    <div>
+    <div className="cards-container">
       {data.results.map((comics) => {
         console.log(comics);
         return (
-          <div>
-            <p>{comics.title}</p>
-            <img
-              src={comics.thumbnail.path + "." + comics.thumbnail.extension}
-              alt=""
-            />
-            <p>{comics.description}</p>
+          <div className="cards">
+            <div className="card-top">
+              <h2>{comics.title}</h2>
+            </div>
+            <div className="card-bot">
+              <img
+                src={comics.thumbnail.path + "." + comics.thumbnail.extension}
+                alt={comics.title}
+              />
+              <div>
+                <p>{comics.description}</p>
+                {/* <p>{addEllipsis(comics.description, 1)}</p> */}
+              </div>
+            </div>
           </div>
         );
       })}
