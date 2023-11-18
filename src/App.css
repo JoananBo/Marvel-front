@@ -58,7 +58,7 @@ button {
   gap: 20px;
   width: 1080px;
   margin: 0 auto;
-  border: solid 3px yellow;
+  /* border: solid 3px yellow; */
 }
 .cards {
   display: flex;
@@ -68,19 +68,19 @@ button {
   width: 250px;
 }
 .card-top {
-  border: solid 3px violet;
+  /* border: solid 3px violet; */
   height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
-.card-top h2 {
-  text-decoration: none;
-  /* border: solid 2px black; */
-}
+/* .card-top h1 { */
+/* text-decoration: none; */
+/* border: solid 2px black; */
+/* } */
 .card-bot {
-  border: solid 3px green;
+  /* border: solid 3px green; */
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -97,3 +97,68 @@ button {
   margin-top: 10px;
   text-decoration: none;
 }
+/*--------------------------------------*/
+/*-----------CHARACTERSID-----------------*/
+/*--------------------------------------*/
+
+.id-container {
+  width: 1080px;
+  display: flex;
+  gap: 10%;
+  border: solid 3px yellow;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.id-cards {
+  border: solid 3px green;
+  width: 45%;
+  margin-bottom: 30px;
+}
+.id-top h2 {
+  text-align: center;
+  margin: 20px;
+}
+.id-bot {
+  margin-bottom: 30px;
+  /* display: flex; */
+}
+.id-bot img {
+  width: 100%;
+}
+.id-bot p {
+  /* border: solid 3px orange; */
+  text-align: center;
+  /* margin: auto; */
+  margin-top: 20px;
+}
+/*--------------------------------------*/
+/*-----------COMICS---------------------*/
+/*--------------------------------------*/
+.comics-container {
+  width: 1080px;
+  display: flex;
+  gap: 5%;
+  /* border: solid 3px yellow; */
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.comic-cards {
+  border: solid violet 3px;
+  width: 30%;
+  margin-bottom: 20px;
+}
+/* .comic-bot img {
+  width: 100%;
+  height: 80%;
+}
+.comic-top {
+  height: 10%;
+}
+.comic-bot {
+  height: 90%;
+  border: solid 3px orange;
+}
+/* .comic-txt {
+  height: 20%;
+  border: solid 3px red;
+} */

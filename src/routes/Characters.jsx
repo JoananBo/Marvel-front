@@ -34,11 +34,13 @@ const Characters = () => {
           return (
             <Link
               to={`/comics/${character._id}`}
+              target="_blank"
               // state={{ characterId: character._id }}
+              style={{ textDecoration: "none" }}
             >
               <div className="cards">
                 <div className="card-top">
-                  <h2>{character.name}</h2>
+                  <h1>{character.name}</h1>
                 </div>
                 <div className="card-bot">
                   <img

@@ -15,7 +15,12 @@ const Header = () => {
           <Link to="/comics">
             <button>Comics</button>
           </Link>
-          <button>Favoris</button>
+          <a
+            href="https://youtube.com/shorts/rzf-kCICBiY?si=K2maoGgCxA9Jrgi_"
+            target="_blank"
+          >
+            <button>Favoris</button>
+          </a>
         </section>
       </div>
     </div>

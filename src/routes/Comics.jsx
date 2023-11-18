@@ -26,15 +26,15 @@ const Comics = () => {
   return isLoading ? (
     <p>Un peu de patience...</p>
   ) : (
-    <div className="cards-container">
+    <div className="comics-container">
       {data.results.map((comics) => {
         console.log(comics);
         return (
-          <div className="cards">
-            <div className="card-top">
+          <div className="comic-cards">
+            <div className="id-top">
               <h2>{comics.title}</h2>
             </div>
-            <div className="card-bot">
+            <div className="id-bot">
               <img
                 src={comics.thumbnail.path + "." + comics.thumbnail.extension}
                 alt={comics.title}
