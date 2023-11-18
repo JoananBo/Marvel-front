@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
+    <header>
       <div className="header-block">
         <Link to="/">
           <img src={logo} alt="" />
@@ -23,7 +23,7 @@ const Header = () => {
           </a>
         </section>
       </div>
-    </div>
+    </header>
   );
 };
 export default Header;
