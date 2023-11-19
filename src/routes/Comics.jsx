@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import img from "../assets/img/avengers-logo.jpeg";
 
 const Comics = () => {
   const [data, SetData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  // const imgNot = data.thumbnail.path.indexOf("image_not_available");
   const addEllipsis = (text, maxLength) => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
@@ -16,6 +18,7 @@ const Comics = () => {
         );
         console.log("response =>", response.data);
         SetData(response.data);
+
         setIsLoading(false);
       } catch (error) {
         console.log("erreur =>", error);
@@ -23,12 +26,14 @@ const Comics = () => {
     };
     fetchData();
   }, []);
+  // const imgNot = data.thumbnail.path.indexOf("image_not_available");
   return isLoading ? (
     <p>Un peu de patience...</p>
   ) : (
     <div className="comics-container">
       {data.results.map((comics) => {
         console.log(comics);
+        // const imgNot = comics.thumbnail.path.indexOf("image_not_available");
         return (
           <div className="comic-cards">
             <div className="id-top">
@@ -39,6 +44,7 @@ const Comics = () => {
                 src={comics.thumbnail.path + "." + comics.thumbnail.extension}
                 alt={comics.title}
               />
+
               <div>
                 <p>{comics.description}</p>
                 {/* <p>{addEllipsis(comics.description, 1)}</p> */}

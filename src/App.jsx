@@ -8,12 +8,16 @@ import Home from "./routes/Home";
 import "./App.css";
 
 const App = () => {
+  const [search, setSearch] = useState("");
   return (
     <Router>
-      <Header />
+      <Header search={search} setSearch={setSearch} />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/characters" element={<Characters />}></Route>
+        <Route
+          path="/characters"
+          element={<Characters search={search} />}
+        ></Route>
         <Route path="/comics" element={<Comics />}></Route>
         <Route path="/comics/:characterId" element={<CharacterId />}></Route>
       </Routes>

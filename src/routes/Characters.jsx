@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const Characters = () => {
+const Characters = (search) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const addEllipsis = (text, maxLength) => {
@@ -13,7 +13,7 @@ const Characters = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://site--marvel-backend--zg6fw4jztfcn.code.run/characters"
+          `https://site--marvel-backend--zg6fw4jztfcn.code.run/characters?name=${search}`
         );
         console.log("response=>", response.data);
         setData(response.data);
@@ -23,7 +23,7 @@ const Characters = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [search]);
   return isLoading ? (
     <p>Un peu de patience...</p>
   ) : (
