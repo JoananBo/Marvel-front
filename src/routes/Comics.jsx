@@ -24,7 +24,7 @@ const Comics = ({ search }) => {
       }
     };
     fetchData();
-  }, []);
+  }, [search]);
   // const imgNot = data.thumbnail.path.indexOf("image_not_available");
   return isLoading ? (
     <p>Un peu de patience...</p>
