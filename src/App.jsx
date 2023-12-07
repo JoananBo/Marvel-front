@@ -5,6 +5,7 @@ import Characters from "./routes/Characters";
 import Comics from "./routes/Comics";
 import CharacterId from "./routes/CharacterId";
 import Home from "./routes/Home";
+import ComicId from "./routes/ComicId";
 import "./App.css";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         ></Route>
         <Route path="/comics" element={<Comics search={search} />}></Route>
         <Route path="/comics/:characterId" element={<CharacterId />}></Route>
+        <Route path="/comic/:comicId" element={<ComicId />}></Route>
       </Routes>
     </Router>
   );

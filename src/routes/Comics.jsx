@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Comics = ({ search }) => {
   const [data, SetData] = useState();
@@ -34,22 +35,24 @@ const Comics = ({ search }) => {
         console.log(comics);
         // const imgNot = comics.thumbnail.path.indexOf("image_not_available");
         return (
-          <div className="comic-cards">
-            <div className="id-top">
-              <h2>{comics.title}</h2>
-            </div>
-            <div className="id-bot">
-              <img
-                src={comics.thumbnail.path + "." + comics.thumbnail.extension}
-                alt={comics.title}
-              />
+          <Link to={`/comic/${comics._id}`} target="_blank">
+            <div className="comic-cards">
+              <div className="id-top">
+                <h2>{comics.title}</h2>
+              </div>
+              <div className="id-bot">
+                <img
+                  src={comics.thumbnail.path + "." + comics.thumbnail.extension}
+                  alt={comics.title}
+                />
 
-              <div>
-                <p>{comics.description}</p>
-                {/* <p>{addEllipsis(comics.description, 1)}</p> */}
+                <div>
+                  <p>{comics.description}</p>
+                  {/* <p>{addEllipsis(comics.description, 1)}</p> */}
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>
