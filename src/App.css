@@ -55,6 +55,12 @@ button:hover {
   /* transform: scale(1;03); */
   color: white;
 }
+header input {
+  /* border: solid 2px yellow; */
+  border-radius: 20px;
+  width: 250px;
+  height: 30px;
+}
 /*--------------------------------*/
 /*-----------HERO-----------------*/
 /*--------------------------------*/
@@ -177,14 +183,14 @@ button:hover {
 .comics-container {
   width: 1080px;
   display: flex;
-  gap: 5%;
+  gap: 60px;
   /* border: solid 3px yellow; */
   flex-wrap: wrap;
   margin: 0 auto;
 }
 .comic-cards {
   border: solid violet 3px;
-  width: 30%;
+  width: 320px;
   margin-bottom: 20px;
   color: white;
   border-radius: 20px;

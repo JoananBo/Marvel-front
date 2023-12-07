@@ -10,7 +10,7 @@ const Header = ({ search, setSearch }) => {
         </Link>{" "}
         <div>
           <input
-            placeholder="Recherche..."
+            placeholder="   Recherche..."
             type="text"
             value={search}
             onChange={(event) => {

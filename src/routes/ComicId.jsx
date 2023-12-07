@@ -23,6 +23,12 @@ const ComicsId = () => {
     };
     fetchData();
   }, []);
-  return isLoading ? <p>Un peu de patience...</p> : <div>Yolo</div>;
+  return isLoading ? (
+    <p>Un peu de patience...</p>
+  ) : (
+    <div>
+      <p>{data.title}</p>
+    </div>
+  );
 };
 export default ComicsId;

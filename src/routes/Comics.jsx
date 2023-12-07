@@ -32,10 +32,14 @@ const Comics = ({ search }) => {
   ) : (
     <div className="comics-container">
       {data.results.map((comics) => {
-        console.log(comics);
+        // console.log(comics);
         // const imgNot = comics.thumbnail.path.indexOf("image_not_available");
         return (
-          <Link to={`/comic/${comics._id}`} target="_blank">
+          <Link
+            to={`/comic/${comics._id}`}
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
             <div className="comic-cards">
               <div className="id-top">
                 <h2>{comics.title}</h2>
@@ -47,7 +51,7 @@ const Comics = ({ search }) => {
                 />
 
                 <div>
-                  <p>{comics.description}</p>
+                  {/* <p>{comics.description}</p> */}
                   {/* <p>{addEllipsis(comics.description, 1)}</p> */}
                 </div>
               </div>
