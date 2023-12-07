@@ -18,7 +18,7 @@ const ComicsId = () => {
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
-        console.log("erreur=>", error);
+        console.log("erreur front=>", error);
       }
     };
     fetchData();
