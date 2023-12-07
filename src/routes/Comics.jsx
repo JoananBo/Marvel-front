@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Comics = () => {
+const Comics = ({ search }) => {
   const [data, SetData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   // const imgNot = data.thumbnail.path.indexOf("image_not_available");
@@ -13,7 +13,7 @@ const Comics = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://site--marvel-backend--zg6fw4jztfcn.code.run/comics"
+          `https://site--marvel-backend--zg6fw4jztfcn.code.run/comics?title=${search}`
         );
         console.log("response =>", response.data);
         SetData(response.data);
