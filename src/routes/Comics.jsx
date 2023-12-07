@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import img from "../assets/img/avengers-logo.jpeg";
 
 const Comics = () => {
   const [data, SetData] = useState();

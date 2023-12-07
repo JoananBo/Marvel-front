@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const Characters = (search) => {
+const Characters = ({ search }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const addEllipsis = (text, maxLength) => {
@@ -16,6 +16,7 @@ const Characters = (search) => {
           `https://site--marvel-backend--zg6fw4jztfcn.code.run/characters?name=${search}`
         );
         console.log("response=>", response.data);
+        // console.log("Je me relance une fois");
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
