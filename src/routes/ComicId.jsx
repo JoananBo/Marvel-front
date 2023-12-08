@@ -26,8 +26,16 @@ const ComicsId = () => {
   return isLoading ? (
     <p>Un peu de patience...</p>
   ) : (
-    <div>
-      <p>{data.title}</p>
+    <div className="container">
+      <div className="comicid">
+        <p className="comicid-top">{data.title}</p>
+
+        <img
+          src={data.thumbnail.path + "." + data.thumbnail.extension}
+          alt=""
+        />
+        <p className="comicid-bot">{data.description}</p>
+      </div>
     </div>
   );
 };

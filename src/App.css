@@ -216,3 +216,38 @@ header input {
   height: 20%;
   border: solid 3px red;
 } */
+
+/*--------------------------------------*/
+/*-----------COMICSID---------------------*/
+/*--------------------------------------*/
+
+.comicid {
+  /* border: solid 2px yellow; */
+  margin: 0 auto;
+  width: 50%;
+  color: transparent;
+}
+.comicid img {
+  width: 100%;
+  margin-top: 20px;
+}
+.comicid-top {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.comicid:hover {
+  color: white;
+  border: transparent;
+  transform: scale(1.03);
+  transition: 0.5s;
+}
+.comicid-bot {
+  /* border: solid 3px red; */
+  margin-bottom: 50px;
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
