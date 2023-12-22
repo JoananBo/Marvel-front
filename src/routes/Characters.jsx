@@ -45,7 +45,7 @@ const Characters = ({ search }) => {
         currentPage={currentPage}
       />
       <div className="cards-container">
-        {currentPost.results.map((character) => {
+        {currentPost.map((character) => {
           console.log("character=>", character);
           return (
             <Link
