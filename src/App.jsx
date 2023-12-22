@@ -10,6 +10,7 @@ import "./App.css";
 
 const App = () => {
   const [search, setSearch] = useState("");
+
   return (
     <Router>
       <Header search={search} setSearch={setSearch} />

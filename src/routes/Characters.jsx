@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Pagination from "../components/Pagination";
 
 const Characters = ({ search }) => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPage] = useState(28);
   const addEllipsis = (text, maxLength) => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
@@ -17,7 +20,7 @@ const Characters = ({ search }) => {
         );
         console.log("response=>", response.data);
         // console.log("Je me relance une fois");
-        setData(response.data);
+        setData(response.data.results);
         setIsLoading(false);
       } catch (error) {
         console.log("erreur =>", error);
@@ -25,12 +28,23 @@ const Characters = ({ search }) => {
     };
     fetchData();
   }, [search]);
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPost = data.slice(firstPostIndex, lastPostIndex);
+
   return isLoading ? (
     <p>Un peu de patience...</p>
   ) : (
     <div>
+      <Pagination
+        totalPosts={data.length}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
       <div className="cards-container">
-        {data.results.map((character) => {
+        {currentPost.results.map((character) => {
           console.log("character=>", character);
           return (
             <Link
@@ -67,6 +81,12 @@ const Characters = ({ search }) => {
           );
         })}
       </div>
+      <Pagination
+        totalPosts={data.length}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </div>
   );
 };
