@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Pagination from "../components/Pagination";
 
 const Comics = ({ search }) => {
-  const [data, SetData] = useState();
+  const [data, SetData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPage] = useState(18);
