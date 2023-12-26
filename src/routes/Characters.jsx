@@ -61,14 +61,7 @@ const Characters = ({ search }) => {
                 <div className="card-bot">
                   <img
                     src={
-                      character.thumbnail.path +
-                        "." +
-                        character.thumbnail.extension ===
-                      "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"
-                        ? "../src/assets/img/avengers-logo.jpeg"
-                        : character.thumbnail.path +
-                          "." +
-                          character.thumbnail.extension
+                      comics.thumbnail.path + "." + comics.thumbnail.extension
                     }
                     alt={character.name}
                   />
