@@ -6,7 +6,7 @@ const Home = () => {
     <section className="home">
       <div className="container">
         <a href="https://www.marvel.com/" target="_blank">
-          <img className="hero-img" src={hero} alt="" />
+          <img className="hero-img" src={hero} alt="marvel.com" />
         </a>
       </div>
     </section>
