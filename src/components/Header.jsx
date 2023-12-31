@@ -32,12 +32,12 @@ const Header = ({ search, setSearch }) => {
           <Link to="/comics">
             <button>Comics</button>
           </Link>
-          <a
+          {/* <a
             href="https://youtube.com/shorts/rzf-kCICBiY?si=K2maoGgCxA9Jrgi_"
             target="_blank"
           >
             <button>Favoris</button>
-          </a>
+          </a> */}
         </section>
       </div>
     </header>
