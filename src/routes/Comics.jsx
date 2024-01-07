@@ -6,12 +6,10 @@ import Pagination from "../components/Pagination";
 const Comics = ({ search }) => {
   const [data, SetData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  // States pour pagination
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPage] = useState(18);
-  // const imgNot = data.thumbnail.path.indexOf("image_not_available");
-  const addEllipsis = (text, maxLength) => {
-    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,11 +28,11 @@ const Comics = ({ search }) => {
     fetchData();
   }, [search]);
 
+  // Variables pour pagination
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPost = data.slice(firstPostIndex, lastPostIndex);
 
-  // const imgNot = data.thumbnail.path.indexOf("image_not_available");
   return isLoading ? (
     <p>Un peu de patience...</p>
   ) : (
@@ -47,8 +45,6 @@ const Comics = ({ search }) => {
       />
       <div className="comics-container">
         {currentPost.map((comics) => {
-          // console.log(comics);
-          // const imgNot = comics.thumbnail.path.indexOf("image_not_available");
           return (
             <Link
               to={`/comic/${comics._id}`}
@@ -66,11 +62,6 @@ const Comics = ({ search }) => {
                     }
                     alt={comics.title}
                   />
-
-                  <div>
-                    {/* <p>{comics.description}</p> */}
-                    {/* <p>{addEllipsis(comics.description, 1)}</p> */}
-                  </div>
                 </div>
               </div>
             </Link>

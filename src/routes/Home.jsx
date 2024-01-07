@@ -1,4 +1,3 @@
-import { Router } from "react-router-dom";
 import hero from "../assets/img/hero2.webp";
 
 const Home = () => {

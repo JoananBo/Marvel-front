@@ -5,9 +5,6 @@ import axios from "axios";
 const CharacterId = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  // const addEllipsis = (text, maxLength) => {
-  //   return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-  // };
   const params = useParams();
   const characterId = params.characterId;
   useEffect(() => {
@@ -42,7 +39,6 @@ const CharacterId = () => {
                   alt=""
                 />
                 <p>{comic.description}</p>
-                {/* <p>{addEllipsis(comic.description, 40)}</p> */}
               </div>
             </div>
           </div>

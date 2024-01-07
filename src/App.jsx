@@ -1,13 +1,17 @@
+import "./App.css";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+// Routes
 import Characters from "./routes/Characters";
 import Comics from "./routes/Comics";
 import CharacterId from "./routes/CharacterId";
 import Home from "./routes/Home";
 import ComicId from "./routes/ComicId";
-import Footer from "./components/Footer";
-import "./App.css";
 
 const App = () => {
   const [search, setSearch] = useState("");

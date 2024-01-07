@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-box">
-        <p>Made by Joanan Boureille</p>
+        <p>Réalisé par Joanan Boureille</p>
       </div>
     </footer>
   );
