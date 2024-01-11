@@ -32,7 +32,6 @@ const App = () => {
       <Footer />
     </Router>
   );
-  // <>"Jarvis ? Drop my needle"</>;
 };
 
 export default App;
