@@ -6,9 +6,11 @@ import Pagination from "../components/Pagination";
 const Characters = ({ search }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  // States pour pagination
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPage] = useState(28);
 
+  // Fonction pour limiter la taille de la description des personnages
   const addEllipsis = (text, maxLength) => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
@@ -30,6 +32,7 @@ const Characters = ({ search }) => {
     fetchData();
   }, [search]);
 
+  // Variables pour pagination
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPost = data.slice(firstPostIndex, lastPostIndex);
