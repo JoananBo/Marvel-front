@@ -8,7 +8,7 @@ const Header = ({ search, setSearch }) => {
   return (
     <header>
       <div className="header-block">
-        <Link to="/">
+        <Link to="/characters">
           <img src={logo} alt="" />
         </Link>
         {(location.pathname === "/characters" ||
