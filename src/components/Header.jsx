@@ -8,7 +8,7 @@ const Header = ({ search, setSearch }) => {
   return (
     <header>
       <div className="header-block">
-        <Link to="/characters">
+        <Link to="/">
           <img src={logo} alt="" />
         </Link>
         {(location.pathname === "/characters" ||
@@ -27,10 +27,10 @@ const Header = ({ search, setSearch }) => {
 
         <section>
           <Link to="/characters">
-            <button>Personnages</button>
+            <button className="char">Personnages</button>
           </Link>
           <Link to="/comics">
-            <button>Comics</button>
+            <button className="com">Comics</button>
           </Link>
           {/* <button>Favoris</button> */}
         </section>
