@@ -285,6 +285,7 @@ header input {
 /*--------------------------------------*/
 /*-----------FOOTER---------------------*/
 /*--------------------------------------*/
+
 .footer-box {
   height: 75px;
   width: 100%;
@@ -296,4 +297,99 @@ footer p {
   text-align: center;
   margin-top: 40px;
   font-size: 14px;
+}
+/*--------------------------------------*/
+/*-----------RESPONSIVE---------------------*/
+/*--------------------------------------*/
+@media (min-width: 0px) and (max-width: 576px) {
+  .header-block {
+    /* border: solid 3px yellow; */
+    height: 175px;
+    flex-direction: column;
+    width: 576px;
+  }
+  .header-block img {
+    width: 70px;
+    height: 75px;
+    margin-left: 20px;
+  }
+  .cards-container {
+    /* border: solid 3px green; */
+    display: flex;
+
+    gap: 50px;
+    width: 500px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  .cards {
+    /* border: solid 3px pink; */
+    width: 200px;
+  }
+  .comics-container {
+    /* border: solid 3px green; */
+
+    display: flex;
+
+    gap: 50px;
+    width: 500px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  .comic-cards {
+    /* border: solid 3px pink; */
+    width: 200px;
+  }
+  .id-container {
+    /* border: solid 3px green; */
+    width: 500px;
+  }
+  .container {
+    /* border: solid 3px green; */
+    width: 500px;
+  }
+  .comicid {
+    /* border: solid 3px red; */
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .header-block {
+    width: 768px;
+    /* border: solid 3px orange; */
+  }
+  .com {
+    margin-right: 10px;
+  }
+  .cards-container {
+    /* border: solid 3px brown; */
+    width: 700px;
+    justify-content: space-between;
+  }
+  .cards {
+    /* border: solid 3px yellowgreen; */
+    width: 200px;
+  }
+  .comics-container {
+    /* border: solid 3px brown; */
+    width: 700px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .comic-cards {
+    /* border: solid 3px yellowgreen; */
+    width: 175px;
+  }
+  .id-container {
+    /* border: solid 3px brown; */
+    width: 700px;
+  }
+  .container {
+    /* border: solid 3px yellowgreen; */
+    width: 700px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header-block {
+    /* border: solid 3px red; */
+  }
 }

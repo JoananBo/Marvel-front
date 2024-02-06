@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Characters from "./routes/Characters";
 import Comics from "./routes/Comics";
 import CharacterId from "./routes/CharacterId";
-import Home from "./routes/Home";
+// import Home from "./routes/Home";
 import ComicId from "./routes/ComicId";
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
     <Router>
       <Header search={search} setSearch={setSearch} />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        {/* <Route path="/" element={<Home />}></Route> */}
         <Route
           path="/characters"
           element={<Characters search={search} />}
