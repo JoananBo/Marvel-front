@@ -1,9 +1,12 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # Marvel-front
+
+Bonjour,
+
+Bienvenue sur le projet Marvel de Joanan Boureille.
+Ce projet a été réalisé dans le cadre du bootcamp développeur web et mobile du Reacteur (2023).
+
+Ce site a été fait grâce à React et à l'API fournie par le Reacteur. Le backend de ce site est hébergé sur Northflank, le front sur netlify.
+
+Pour toute autre information, vous pouvez me contacter sur boureille.joanan@gmail.com
+
+Bonne journée !
