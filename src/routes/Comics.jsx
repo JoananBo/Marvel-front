@@ -48,7 +48,6 @@ const Comics = ({ search }) => {
           return (
             <Link
               to={`/comic/${comics._id}`}
-              target="_blank"
               style={{ textDecoration: "none" }}
             >
               <div className="comic-cards">

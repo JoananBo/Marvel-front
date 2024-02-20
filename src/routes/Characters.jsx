@@ -53,7 +53,6 @@ const Characters = ({ search }) => {
           return (
             <Link
               to={`/comics/${character._id}`}
-              target="_blank"
               // state={{ characterId: character._id }}
               style={{ textDecoration: "none" }}
             >

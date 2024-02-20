@@ -14,7 +14,8 @@ const CharacterId = () => {
         const response = await axios.get(
           `https://site--marvel-backend--zg6fw4jztfcn.code.run/comics/${characterId}`
         );
-        console.log("response=>", response.data);
+        console.log("response que je cherche=>", response.data);
+        // console.log("image=>", response.data.thumbnail.path);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -25,10 +26,17 @@ const CharacterId = () => {
   }, []);
   return isLoading ? (
     <p>Un peu de patience...</p>
+  ) : data.comics.length === 0 ? (
+    //  data.thumbnail.path ===
+    //   "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+    <p className="sorry">
+      Nous sommes navrés, l'API fournie ne nous renvoie aucune illustration pour
+      ce personnage.
+    </p>
   ) : (
     <div className="id-container">
       {data.comics.map((comic) => {
-        console.log("un comic=>", comic);
+        // console.log("un comic=>", comic);
         return (
           <div className="id-cards">
             <div className="id-top">

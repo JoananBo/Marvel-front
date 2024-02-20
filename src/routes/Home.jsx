@@ -1,13 +1,14 @@
 import hero from "../assets/img/hero2.webp";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <section className="home">
-      <div className="container">
-        <a href="https://www.marvel.com/" target="_blank">
+      <Link to={"/characters"}>
+        <div className="container">
           <img className="hero-img" src={hero} alt="marvel.com" />
-        </a>
-      </div>
+        </div>
+      </Link>
     </section>
   );
 };
