@@ -30,8 +30,8 @@ const CharacterId = () => {
     //  data.thumbnail.path ===
     //   "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
     <p className="sorry">
-      Nous sommes navrés, l'API fournie ne nous renvoie aucune illustration pour
-      ce personnage.
+      Je suis navré, l'API fournie ne nous renvoie aucune information pour ce
+      personnage.
     </p>
   ) : (
     <div className="id-container">
